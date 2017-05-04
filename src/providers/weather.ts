@@ -21,6 +21,14 @@ export class Weather {
 
     return this.http.get(url);
   }
+
+  forecast(cityID:string, numOfDays: number){
+
+    let url = this._baseUrl + 'forecast/daily';
+    url += '?appId=' + this._appId;
+    url += '&q=' + cityID;
+    url += ',' + numOfDays;
+  }
 }
 
 

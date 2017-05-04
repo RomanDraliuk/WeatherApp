@@ -3,6 +3,7 @@ import {ModalController, NavController} from 'ionic-angular';
 import {Add} from "../add/add";
 import {Weather} from "../../providers/weather";
 import 'rxjs/Rx';
+import {Forecast} from "../forecast/forecast";
 
 
 @Component({
@@ -43,6 +44,7 @@ export class HomePage {
   }
   viewForcast(weather){
     console.log(weather);
+    this.navCtrl.push(Forecast,{weather: weather});
   }
 
 }

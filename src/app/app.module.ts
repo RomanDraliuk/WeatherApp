@@ -11,6 +11,7 @@ import {Weather} from "../providers/weather";
 import {HttpModule} from "@angular/http";
 import {IonicStorageModule} from "@ionic/storage";
 import {Temperature} from "../pipes/temperature";
+import {Forecast} from "../pages/forecast/forecast";
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import {Temperature} from "../pipes/temperature";
     MyApp,
     HomePage,
     Add,
-    Temperature
+    Temperature,
+    Forecast
 
   ],
   imports: [
@@ -32,13 +34,15 @@ import {Temperature} from "../pipes/temperature";
   entryComponents: [
     MyApp,
     HomePage,
-    Add
+    Add,
+    Forecast
 
   ],
   providers: [
     StatusBar,
     SplashScreen,
     Weather,
+
 
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
