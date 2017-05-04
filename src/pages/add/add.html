@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Add Weather</ion-title>
+    <ion-buttons start>
+      <button ion-button clear (click)="dismiss()">
+        <ion-icon name="close-circle"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+    <ion-item>
+      <ion-label> City</ion-label>
+      <ion-input type="text" [(ngModel)]="data.city"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label> Country</ion-label>
+      <ion-select [(ngModel)]="data.country">
+        <ion-option value="us">United State</ion-option>
+        <ion-option value="il">Israel</ion-option>
+      </ion-select>
+    </ion-item>
+   <ion-buttons >
+     <button  ion-button large (click)="dismiss(data)">Add Weather</button></ion-buttons>
+  </ion-list>
+
+
+</ion-content>
+
+
